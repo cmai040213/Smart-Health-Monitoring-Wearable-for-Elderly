@@ -1,0 +1,108 @@
+:root {
+  --bg: #0f172a;
+  --cardbg: #171e2d;
+  --accent: #3b82f6;
+  --accentsoft: rgba(59, 130, 246, 0.15);
+  --textmain: rgb(241, 241, 241);
+  --textmuted: #9ca3af;
+  --danger: #ef4444;
+  --success: #22c55e;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, sans-serif;
+}
+
+header{
+  color: rgb(255, 255, 255);
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+
+body {
+  background: var(--bg);
+  color: var(--textmain);
+  padding: 16px;
+}
+
+.container{
+  max-width: 1200px;
+  margin: auto;
+}
+
+.navbar ul{
+    list-style-type: none;
+    background-color: #0f1625;
+    padding: 0px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+.navbar a{
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    display: block;
+    text-align: center;
+}
+.navbar a:hover{
+    background-color: hsl(221, 42%, 20%);
+}
+.componentsWrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+  gap: 25px;
+}
+.images {
+  text-align: center;
+}
+
+.images img {
+  width: 200px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.2);
+}
+.description{
+text-align: center;
+}
+
+.title{
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.parts{
+  margin-bottom: 25px;
+  background-color: #1c2433;
+  border-radius: 30px;
+  padding: 15px 20px;
+}
+
+a:link {
+  color: hsl(0, 0%, 80%);;
+  text-decoration: none;
+}
+
+a:visited{
+  color: hsl(0, 0%, 80%);;
+  text-decoration: none;
+}
+
+a:hover{
+  color: hsl(0, 0%, 90%);;
+  text-decoration: none;
+}
+
+a:active{
+  color: hsl(0, 0%, 100%);;
+  text-decoration: none;
+}

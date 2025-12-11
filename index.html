@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Fall Detection Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+
+  <link rel="stylesheet" href="style.css">
+
+  <!--link with map-->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+</head>
+
+
+<body>
+  <div class="container">
+    <header>
+      <h1>Smart Health Monitoring Wearable for Elderly</h1>
+    </header>
+  
+  <nav class="navbar">
+      <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="product.html">Project</a></li>
+          <li><a href="aboutMe.html">About me</a></li>
+      </ul>
+  </nav>
+    
+<div id="top">
+    <h2>Fall Detection Dashboard</h1>
+    <span class="connect" id="connectionStatus">Connecting…</span>
+  </div>
+
+    <section class="cards">
+      <div class="card">
+        <div class="cardTitle">Heart Rate</div>
+        <div class="cardValue" id="heartRate">-- BPM</div>
+        <div class="small" id="heartStatus">No data</div>
+      </div>
+
+
+      <div class="card">
+        <div class="cardTitle">Fall Status</div>
+        <div class="cardValue" id="fallStatusText">--</div>
+      </div>
+
+
+      <div class="card">
+        <div class="cardTitle">GPS Position</div>
+        <div class="cardValue" id="gpsCoords">-- , --</div>
+      </div>
+    </section>
+
+
+    <section class="grid grid2">
+      <div class="grid" style="gap:12px;">
+        <div class="chartCard">
+          <div class="sectionTitle">Heart Rate & Acceleration</div>
+          <canvas id="vitalChart"></canvas>
+        </div>
+
+
+        <div class="tableCard">
+          <div class="sectionTitle">Fall History</div>
+          <table>
+            <thead>
+              <tr>
+                <th>Time</th>
+                <th>Heart Rate</th>
+                <th>GPS</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody id="fallTableBody"></tbody>
+          </table>
+        </div>
+      </div>
+
+
+      <div class="mapCard">
+        <div class="sectionTitle">Live Location</div>
+        <div id="map"></div>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    <h3></h3>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="script.js"></script>
+
+
+</body>
+</html>
+
+

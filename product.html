@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Information</title>
+    <link rel="stylesheet" href="product.css">
+</head>
+<body>
+    
+     <header>
+      <h1>Smart Health Monitoring Wearable for Elderly</h1>
+    </header>
+
+  <div class="container">
+    
+    <nav class="navbar">
+      <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="product.html">Project</a></li>
+          <li><a href="aboutMe.html">About me</a></li>
+      </ul>
+    </nav>
+
+    <div class="parts">
+      <h2 class="title" id="introductionTitle">Introduction</h2>
+      <p>Elderly people who live alone may struggle to cope with a sudden 
+        fall or health problems without immediate assistance. Although various 
+        types of monitoring devices are available on the market, they are often 
+        expensive or difficult for seniors to use.</p>
+    </div>
+    
+    <div class="parts">
+      <h2 class="title" id="solutionTitle">Solution</h2>
+      <p>The goal of this project is to create a simple wearable device that can 
+        detect falls, track heartbeats, and determine locations at a low cost, while 
+        maintaining essential functions to improve the lives of the elderly.</p>
+    </div>
+    
+    <div class="parts">
+      <h2 class="title" id="componentsTitle">Major Compoents</h2>
+      <div class="componentsWrapper">
+        <div class="images">
+            <img src="images/r4.png" alt="Arduino R4 Wifi">
+            <a href="https://docs.arduino.cc/hardware/uno-r4-wifi/#features" target="_blank">
+              <div class="description">Arduino R4 Wifi</div>
+            </a>
+            
+          </div>
+            
+          <div class="images">
+            <img src="images/HR.jpg" alt="MAX30102">
+            <a href="https://www.analog.com/media/en/technical-documentation/data-sheets/max30102.pdf" target="_blank">
+              <div class="description">MAX30102</div>
+            </a>
+          </div>
+            
+          <div class="images">
+            <img src="images/MPU.png" alt="MPU6050">
+            <a href="https://www.mouser.com/datasheet/2/737/mpu6050_6_dof_accelerometer_and_gyro-2489019.pdf?srsltid=AfmBOoptqYj-_
+                      28SWTXtfJbztMkKzP364Z_mfp1FPdg1N8alnx8YI3gD" target="_blank">
+              <div class="description">MPU6050</div>
+            </a>
+          </div>
+            
+          <div class="images">
+            <img src="images/GPS.png" alt="NEO-6M">
+            <a href="https://content.u-blox.com/sites/default/files/products/documents/NEO-6_DataSheet_%28GPS.G6-HW-09005%29.pdf" target="_blank">
+              <div class="description">NEO-6M</div>
+            </a>
+            
+          </div>
+      </div>
+    </div>
+
+    <div class="parts">
+      <h2 class="title" id="systemTitle">System Design & Method</h2>
+      <p>Heart rate is collected when the device is worn on the wrist using the MAX30102. 
+        MPU6050 collects acceleration and gyroscope data for detecting sudden changes related 
+        to falls, combined with the formula in Table 4 and the reference acceleration values 
+        in Table 6 from SisFall: A Fall and Movement Dataset (1). The Arduino Uno R4 WiFi processed 
+        raw sensor data, NEO-6M GPS, and sent it through WiFi to a website dashboard, where fall 
+        status, heart rate, and location were displayed.</p>
+    </div>
+    
+    <div class="parts">
+      <h2 class="title" id="resultTitle">Result</h2>
+      <p>The prototype shows that MPU6050 can detect falls based on acceleration and gyroscope. 
+        The MAX30102 can detect heartbeats and the measured BPM values matched the expected range 
+        for healthy resting or light-activity adults as defined by the American Heart Association (2); 
+        however, it still requires time to stabilize and begin reading due to weak light. Although NEO-6M 
+        can track outdoor locations, it cannot determine indoor locations. Overall, the utilization of 
+        these sensors combined could create a low-cost alternative device readily available for 
+        elderly users.<br>With a second version, the design will be improved to make it more comfortable, 
+        enhance the GPS to obtain indoor locations, and well as a stronger heart rate sensor.</p>
+    </div>
+
+    <div class="parts">
+      <h2 class="title" id="citedTitle">Literature Cited</h2>
+      <p>1. Sucerquia A, López JD, Vargas-Bonilla JF. SisFall: A Fall and Movement Dataset. Sensors 
+        (Basel). 2017 Jan 20;17(1):198. doi: 10.3390/s17010198. PMID: 28117691; PMCID: PMC5298771.</p>
+      <p>2. “Target Heart Rates Chart.” Www.Heart.Org, www.heart.org/en/healthy-living/fitness/fitness-basics/target-heart-rates</p>
+    </div>
+    
+    <div class="parts">
+      <h2 class="title" id="acknowledgeTitle">Acknowledgement</h2>
+      <p>I would like to thank my mentor and instructors for their guidance in teaching me about hardware, the fundamentals of Arduino, 
+        and for helping me develop the project. The Undergraduate Research at Dallas College supported this work. 
+        Funded by the Title V Abriendo Caminos DOE Grant P031S210233.</p>
+    </div>
+    
+  </div>
+</body>
+</html>
